@@ -1,0 +1,45 @@
+.promo{
+    background: url('../img/promo.jpg') center center/cover no-repeat;
+    min-height: 737px;
+    &__wrapper{
+        padding: 210px 120px 168px 0;
+    }
+    &__btn{
+        margin-top: 55px;
+    }
+}
+@media (max-width: 768px){
+    .promo{
+        &__wrapper{
+            padding: 150px 120px 168px 0;
+        }
+        min-height: 437px;
+        &__btn{
+            margin-top: 35px;
+        }
+    }
+}
+@media (max-width: 576px){
+    .promo{
+        min-height: 437px;
+        &__wrapper{
+            padding: 20px 0px 168px 0;
+            margin-top: 115px;
+            width: 70%;
+        }
+        &__btn{
+            margin-top: 35px;
+        }
+    }
+}
+@media (max-width: 480px){
+    .promo{
+        background-position: 58%;
+        &__wrapper{
+            padding: 7px 0px 168px 0;
+        }
+        &__btn{
+            margin-top: 7px;
+        }
+    }
+}

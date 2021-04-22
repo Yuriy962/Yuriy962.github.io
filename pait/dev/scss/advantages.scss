@@ -1,0 +1,118 @@
+.advantages{
+    background-color: $advantages-bg;
+    &__inner{
+        padding: 55px 0 67px;
+    }
+    &__title{
+        margin-bottom: 33px;
+        letter-spacing: -0.02em;
+        line-height: 30px;
+    }
+    &__list{
+        flex-wrap: nowrap;
+        margin: 0;
+        overflow: auto;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    &__item{
+        padding: 27px 22px 27px 23px;
+        margin: 0 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 50px rgba(154, 155, 191, 0.3);
+        border-radius: 10px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        &-title{
+            margin-top: 34px;
+            font-size: 19px;
+            line-height: 28px; 
+            font-weight: bold; 
+            color: $text-color;
+        }
+        &-descr{
+            margin-top: 11px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 22px;
+            color: #5F6D85;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+@media (min-width: 1024px){
+    .advantages{
+        &__inner{
+            padding: 90px 0 86px;
+        }
+        &__title{
+            margin-bottom: 64px;
+            letter-spacing: -0.02em;
+            line-height: 30px;
+        }
+        &__list{
+            flex-wrap: nowrap;
+        }
+        &__item{
+            &-title{
+                letter-spacing: 0.03em
+            }
+            &-descr{
+                margin-top: 11px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+@media (min-width: 1920px){
+    .advantages{
+        position: relative;
+        &::after{
+            content: url('../img/catalog/catalog-before.png');
+            position: absolute;
+            bottom: -40%;
+        }
+        &__inner{
+            padding: 55px 0 57px;
+            position: relative;
+            z-index: 1;
+        }
+        &__title{
+            margin-top: 35px;
+            margin-bottom: 50px;
+            font-size: 45px;
+            line-height: 60px;
+            width: 35%;
+        }
+        &__list{
+            overflow: visible;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        &__item{
+            &-title{
+                margin-top: 34px;
+                font-size: 19px;
+                line-height: 28px; 
+                font-weight: bold; 
+                color: $text-color;
+            }
+            &-descr{
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.btn{
+    width: 220px;
+    height: 62px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: $main-color;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+    transition: ease-in-out 0.2s;
+    @media (max-width: 767px){
+        font-size: 12px;
+        width: 145px;
+        height: 49px;
+        transition: ease-in-out 0.2s;
+    }
+    &:hover, &:active, &:focus{
+        background-color: $btn-hover;
+        cursor: pointer;
+        color: #fff;
+    }
+    &-callback{
+        width: 138px;
+        height: 41px;
+        font-size: 11px;
+        margin: 0;
+        @media (max-width: 576px){
+            width: 130px;
+            height: 36px;
+        }
+    }
+    &-white{
+        background-color: #fff;
+        color: $main-color;
+        &:hover, &:active, &:focus{
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            color: $main-color;
+        }
+    }
+}

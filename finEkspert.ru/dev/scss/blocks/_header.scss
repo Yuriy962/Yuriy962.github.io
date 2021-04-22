@@ -1,0 +1,109 @@
+.header{
+    font-size: 13px;
+    border-bottom: 1px solid  rgba(243, 245, 248, 0.5);
+    background-color: rgba(243,245,248,.9);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 0;
+    }
+    &__menu{
+        &-mobile{
+            display: none;
+        }
+    }
+    &__phone{
+        span{
+            display: block;
+            line-height: 24px;
+            color: $text-grey;
+        }
+    }
+}
+@media (max-width: 1160px){
+    .header{
+        font-size: 11px;
+        &__menu{
+            display: block;
+            &-mobile{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+	.header{
+        background-color: #E8EBF0;
+        &__menu{
+            position: absolute;
+            z-index: 1;
+            top: - 100vh;
+            transition: 0.5s all;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.hamburger{
+    display: none;
+    width: 33px;
+    height: 23px;
+    position: relative;
+    z-index: 10px;
+    span{
+        display: block;
+        height: 3px;
+        width: 100%;
+        margin-bottom: 7px;
+        background-color: $text-color;
+        transition: 0.5s all;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &-active{
+        transition: 0.5s all;
+        span{
+            &:first-child{
+                transform: translateY(10px) rotate(-45deg);
+            }
+            &:nth-child(2){
+                display: none;
+            }
+            &:last-child{
+                transform: translateY(0px) rotate(45deg);  
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .hamburger{
+        display: block;
+        order: 5;
+    }
+}
+@media (max-width: 576px){
+    .hamburger {
+        order: initial;
+    }
+    .header{
+        &__wrapper{
+            flex-wrap: wrap;
+            padding: 7px 0;
+        }
+        &__phone{
+            font-size: 13px;
+            span{
+                display: none;
+            }
+        }
+    }
+}

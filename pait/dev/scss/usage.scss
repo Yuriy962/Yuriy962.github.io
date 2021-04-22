@@ -1,0 +1,165 @@
+.usage{
+    background-color: $dark-blue;
+    position: relative;
+    &::before{
+        content: url(../img/usage/usage-before.png);
+        position: absolute;
+        top: -25%;
+    }
+    &__inner{
+        padding: 56px 0 78px;
+        overflow: hidden;
+    }
+    &__title{
+        color: #fff;
+        margin-bottom: 36px;
+        letter-spacing: -.01em;
+    }
+    &__list{
+        background-color: #fff;
+        flex-wrap: nowrap;
+        overflow: auto;
+        border-radius: 10px;
+
+        padding: 32px 23px 33px;
+        margin-left: 0;
+        margin-right: -25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        display: flex;
+        justify-content: flex-start;
+        &-inner{
+            width: 12em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 0;
+        }
+        
+        &-bg{
+            background: url(../img/catalog/shape.svg) left/contain no-repeat;            
+            position: absolute;
+            width: 10em;
+            height: 8em;
+            &::after{
+                content: url(../img/usage/arrow-small.svg);
+                position: absolute;
+                top: 30%;
+                right: 0%;
+                transform: translateX(50%);
+                z-index: -1;
+            }
+            @media (min-width: 992px){
+                &::after{
+                    right: -25%;
+                }
+            }
+            @media (min-width: 1360px){
+                &::after{
+                    content: url(../img/usage/arrow-big.svg);
+                    right: -40%;
+                }
+            }
+            @media (min-width: 1500px){
+                &::after{
+                    top: 30%;
+                    right: -50%;
+                    transform: translateX(50%);
+                }
+            }
+        }
+        &-img{
+            height: 129px;
+            width: 12em;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 0;
+        }
+        img{
+            width: 54px;
+        }
+        &-subtitle{
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 600;
+        }
+
+        &:last-child{
+            .usage__item-bg{
+                &::after{
+                    content: none;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    .usage{
+        position: relative;
+        z-index: 0;
+        &__inner{
+            &::before,
+            &::after{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-15%);
+                z-index: -1;
+            }
+            &::before{
+                content: url(../img/usage/line-left.svg);
+                left: 20px;
+            }
+            &::after{
+                content: url(../img/usage/line-right.svg);
+                right: 10px;
+            }
+        }
+
+    }
+}
+@media (min-width: 1920px){
+    .usage{
+        position: relative;
+        z-index: 0;
+        &__inner{
+            padding: 13px 0 129px;
+            &::before,
+            &::after{
+                position: absolute;
+                top: 45%;
+                transform: translateY(-15%);
+            }
+            &::before{
+                content: url(../img/usage/line-left.svg);
+                left: 20px;
+            }
+            &::after{
+                content: url(../img/usage/line-right.svg);
+                right: 10px;
+            }
+        }
+        &__title{
+            margin-bottom: 63px;
+        }
+        &__list{
+            margin-right: 0;
+            padding: 64px 23px 64px;
+        }
+        &__item{
+            img{
+                width: 70px;
+            }
+            &-subtitle{
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+    }
+}

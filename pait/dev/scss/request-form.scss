@@ -1,0 +1,54 @@
+.request{
+    min-height: 668px;
+    position: relative;
+    &::before{
+        content: url(../img/request/request-before.png);
+        position: absolute;
+        top: -13%;
+    }
+    &__inner{
+        padding: 53px 0 65px;
+    }
+    &__form{
+        &-title{
+            color: $dark-blue;
+            letter-spacing: -0.02em;
+        }
+        &-subtitle{
+            margin-top: 13px;
+        }
+    }
+
+    &__img{
+        display: none;
+    }
+}
+@media (min-width: 1024px){
+    .request{
+        &__img{
+            display: block;
+            img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                
+            }
+        }
+    }
+}
+@media (min-width: 1920px){
+    .request{
+        min-height: 807px;
+        &__form{
+            &-title{
+                margin-top: 20px;
+            }
+            &-subtitle{
+                margin-top: 13px;
+                letter-spacing: -.012em;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.popup{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    &__body{
+        position: relative;
+    }
+}
+
+.form{
+    background: #f3f5f8;
+    width: 447px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 45px;
+    &__wrapper{
+        position: relative;
+        text-align: center;
+    }
+    .title{
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    &__inputs{
+        margin-top: 32px;
+    }
+    &__input{
+        height: 62px;
+        padding: 26px 25px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid #E8EBF0;
+        border-radius: 5px;
+        font-size: 16px;
+        color: $text-color;
+        &:focus{
+            outline: none;
+        }
+    }
+    &__text{
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+    }
+    &__btn{
+        display: inline-block;
+        text-align: center;
+    }
+}
+.close{
+    width: 14px;
+    height: 14px;
+    background-image: url('../img/close.svg');
+    position: absolute;
+    top: 28px;
+    right: 23px;
+    cursor: pointer;
+}
+@media (max-width: 576px){
+    .form{
+        width: 400px;
+        padding: 45px 25px;
+    }
+}
